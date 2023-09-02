@@ -17,8 +17,16 @@ binary_tree_t
 	}
 
 	new_node->n = value;
-	new_node->left = parent->left;
+	new_node->left = NULL;
 	new_node->right = NULL;
+
+	if (parent->left != NULL)
+	{
+		new_node->left = parent->left;
+		parent->left->parent = new_node;
+	}
+
+	new_node->parent = parent;
 	parent->left = new_node;
 
 	return (new_node);
