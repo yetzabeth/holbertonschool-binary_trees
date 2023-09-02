@@ -16,10 +16,10 @@ binary_tree_t
 		return (NULL);
 	}
 
-	new_node->value = value;
+	new_node->n = value;
 	new_node->left = perent->left;
 	new_node->right = NULL;
-	perent->left = new_node;
+	parent->left = new_node;
 
 	return (new_node);
 }
