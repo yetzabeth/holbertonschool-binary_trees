@@ -17,7 +17,7 @@ binary_tree_t
 	}
 
 	new_node->n = value;
-	new_node->left = perent->left;
+	new_node->left = parent->left;
 	new_node->right = NULL;
 	parent->left = new_node;
 
